@@ -137,4 +137,181 @@ q:after {
 table {
   border-collapse: collapse;
   border-spacing: 0;
+}
+
+body {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  width: 90vw;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.container__panel-1 {
+  background: url("../img/metro-1.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  position: relative;
+  -webkit-transition: -webkit-box-flex 0.7s ease-in;
+  transition: -webkit-box-flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+}
+.container__panel-1.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+.container__panel-1.active .container__title {
+  opacity: 1;
+}
+.container__panel-2 {
+  background: url("../img/metro-2.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  position: relative;
+  -webkit-transition: -webkit-box-flex 0.7s ease-in;
+  transition: -webkit-box-flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+}
+.container__panel-2.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+.container__panel-2.active .container__title {
+  opacity: 1;
+}
+.container__panel-3 {
+  background: url("../img/metro-3.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  position: relative;
+  -webkit-transition: -webkit-box-flex 0.7s ease-in;
+  transition: -webkit-box-flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+}
+.container__panel-3.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+.container__panel-3.active .container__title {
+  opacity: 1;
+}
+.container__panel-4 {
+  background: url("../img/metro-4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  position: relative;
+  -webkit-transition: -webkit-box-flex 0.7s ease-in;
+  transition: -webkit-box-flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+}
+.container__panel-4.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+.container__panel-4.active .container__title {
+  opacity: 1;
+}
+.container__panel-5 {
+  background: url("../img/metro-5.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 80vh;
+  border-radius: 50px;
+  cursor: pointer;
+  -webkit-box-flex: 0.5;
+      -ms-flex: 0.5;
+          flex: 0.5;
+  position: relative;
+  -webkit-transition: -webkit-box-flex 0.7s ease-in;
+  transition: -webkit-box-flex 0.7s ease-in;
+  transition: flex 0.7s ease-in;
+  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
+}
+.container__panel-5.active {
+  -webkit-box-flex: 5;
+      -ms-flex: 5;
+          flex: 5;
+}
+.container__panel-5.active .container__title {
+  opacity: 1;
+}
+.container__title {
+  font-size: 20px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  color: white;
+  opacity: 0;
+}
+
+@media (max-width: 580px) {
+  .container {
+    width: 98vw;
+  }
+  .container__panel-4, .container__panel-5 {
+    display: none;
+  }
 }/*# sourceMappingURL=main.css.map */
