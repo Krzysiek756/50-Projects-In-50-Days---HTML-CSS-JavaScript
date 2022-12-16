@@ -196,6 +196,8 @@ body {
 }
 .container__panel-1.active .container__title {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 .container__panel-2 {
   background: url("../img/metro-2.jpg");
@@ -221,6 +223,8 @@ body {
 }
 .container__panel-2.active .container__title {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 .container__panel-3 {
   background: url("../img/metro-3.jpg");
@@ -246,6 +250,8 @@ body {
 }
 .container__panel-3.active .container__title {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 .container__panel-4 {
   background: url("../img/metro-4.jpg");
@@ -271,6 +277,8 @@ body {
 }
 .container__panel-4.active .container__title {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 .container__panel-5 {
   background: url("../img/metro-5.jpg");
@@ -296,6 +304,8 @@ body {
 }
 .container__panel-5.active .container__title {
   opacity: 1;
+  -webkit-transition: opacity 0.3s ease-in 0.4s;
+  transition: opacity 0.3s ease-in 0.4s;
 }
 .container__title {
   font-size: 20px;
