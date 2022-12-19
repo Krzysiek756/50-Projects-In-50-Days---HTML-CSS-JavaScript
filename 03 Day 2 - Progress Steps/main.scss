@@ -16,81 +16,119 @@ body {
     height: 100vh;
     overflow: hidden;
     margin: 0;
+
+    background-color: #f6f7fb;
 }
+
 
 .container {
+    text-align: center;
     display: flex;
-    flex-direction: row;
-    gap: 10px;
+    flex-direction: column;
 
-    width: 90vw;
-    justify-content: center;
+    &__progress {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 100%;
+        position: relative;
+        width: 350px;
 
+        margin-bottom: 20px;
 
+        &::before {
+            content: '';
+            background-color: #e0e0e0;
+            position: absolute;
+            toP: 50%;
+            left: 0;
+            height: 4px;
+            width: 100%;
 
-
-
-    @for $i from 1 through 5 {
-
-        &__panel-#{$i} {
-
-            background: url('../img/metro-#{$i}.jpg');
-
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 80vh;
-
-
-
-            border-radius: 50px;
-            cursor: pointer;
-            flex: 0.5;
-            position: relative;
-            transition: flex 0.7s ease-in;
-
-
-
-            &.active {
-                flex: 5;
-
-                .container {
-
-                    &__title {
-                        opacity: 1;
-                        transition: opacity 0.3s ease-in 0.4s;
-                    }
-                }
-            }
+            transform: translateY(-50%);
+            z-index: -1;
+            transition: .4s ease;
 
         }
+
+
     }
 
-    &__title {
 
-        font-size: 20px;
-        position: absolute;
-        bottom: 20px;
-        left: 20px;
-        margin: 0;
-        color: white;
 
-        opacity: 0;
-    }
 
 }
 
 
-@media (max-width:580px) {
 
-    .container {
-        width: 98vw;
+.progress {
+    background-color: #3498db;
+    position: absolute;
+    toP: 50%;
+    left: 0;
+    height: 4px;
+    width: 0%;
 
-        &__panel-4,
-        &__panel-5 {
-            display: none;
-        }
+    transform: translateY(-50%);
+    z-index: -1;
+    transition: .4s ease;
+
+
+    &__circle {
+        background-color: #fff;
+        color: #999;
+        border-radius: 50%;
+        height: 35px;
+        width: 35px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 3px solid #e0e0e0;
+        transition: .4s ease;
 
 
     }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.active {
+    border-color: #3498db;
+}
+
+.btn {
+    background-color: #3498db;
+    color: white;
+    border: 0;
+    border-radius: 6px;
+    cursor: pointer;
+    padding: 8px 30px;
+    font-size: 14px;
+
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:focus {
+        outline: 0;
+    }
+
+    &:disabled {
+        background-color: grey;
+        cursor: not-allowed;
+
+        &:active {
+            transform: scale(1);
+        }
+    }
+
 }

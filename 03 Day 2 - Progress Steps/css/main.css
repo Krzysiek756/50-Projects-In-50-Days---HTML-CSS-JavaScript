@@ -156,9 +156,20 @@ body {
   height: 100vh;
   overflow: hidden;
   margin: 0;
+  background-color: #f6f7fb;
 }
 
 .container {
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+.container__progress {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -166,162 +177,107 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  gap: 10px;
-  width: 90vw;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 100%;
+  position: relative;
+  width: 350px;
+  margin-bottom: 20px;
+}
+.container__progress::before {
+  content: "";
+  background-color: #e0e0e0;
+  position: absolute;
+  toP: 50%;
+  left: 0;
+  height: 4px;
+  width: 100%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+
+.progress {
+  background-color: #3498db;
+  position: absolute;
+  toP: 50%;
+  left: 0;
+  height: 4px;
+  width: 0%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  z-index: -1;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
+}
+.progress__circle {
+  background-color: #fff;
+  color: #999;
+  border-radius: 50%;
+  height: 35px;
+  width: 35px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-.container__panel-1 {
-  background: url("../img/metro-1.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  -webkit-transition: -webkit-box-flex 0.7s ease-in;
-  transition: -webkit-box-flex 0.7s ease-in;
-  transition: flex 0.7s ease-in;
-  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
-}
-.container__panel-1.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-.container__panel-1.active .container__title {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.container__panel-2 {
-  background: url("../img/metro-2.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  -webkit-transition: -webkit-box-flex 0.7s ease-in;
-  transition: -webkit-box-flex 0.7s ease-in;
-  transition: flex 0.7s ease-in;
-  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
-}
-.container__panel-2.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-.container__panel-2.active .container__title {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.container__panel-3 {
-  background: url("../img/metro-3.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  -webkit-transition: -webkit-box-flex 0.7s ease-in;
-  transition: -webkit-box-flex 0.7s ease-in;
-  transition: flex 0.7s ease-in;
-  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
-}
-.container__panel-3.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-.container__panel-3.active .container__title {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.container__panel-4 {
-  background: url("../img/metro-4.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  -webkit-transition: -webkit-box-flex 0.7s ease-in;
-  transition: -webkit-box-flex 0.7s ease-in;
-  transition: flex 0.7s ease-in;
-  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
-}
-.container__panel-4.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-.container__panel-4.active .container__title {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.container__panel-5 {
-  background: url("../img/metro-5.jpg");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: 80vh;
-  border-radius: 50px;
-  cursor: pointer;
-  -webkit-box-flex: 0.5;
-      -ms-flex: 0.5;
-          flex: 0.5;
-  position: relative;
-  -webkit-transition: -webkit-box-flex 0.7s ease-in;
-  transition: -webkit-box-flex 0.7s ease-in;
-  transition: flex 0.7s ease-in;
-  transition: flex 0.7s ease-in, -webkit-box-flex 0.7s ease-in, -ms-flex 0.7s ease-in;
-}
-.container__panel-5.active {
-  -webkit-box-flex: 5;
-      -ms-flex: 5;
-          flex: 5;
-}
-.container__panel-5.active .container__title {
-  opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in 0.4s;
-  transition: opacity 0.3s ease-in 0.4s;
-}
-.container__title {
-  font-size: 20px;
-  position: absolute;
-  bottom: 20px;
-  left: 20px;
-  margin: 0;
-  color: white;
-  opacity: 0;
+  border: 3px solid #e0e0e0;
+  -webkit-transition: 0.4s ease;
+  transition: 0.4s ease;
 }
 
-@media (max-width: 580px) {
-  .container {
-    width: 98vw;
-  }
-  .container__panel-4, .container__panel-5 {
-    display: none;
-  }
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  gap: 20px;
+}
+
+.active {
+  border-color: #3498db;
+}
+
+.btn {
+  background-color: #3498db;
+  color: white;
+  border: 0;
+  border-radius: 6px;
+  cursor: pointer;
+  padding: 8px 30px;
+  font-size: 14px;
+}
+.btn:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+}
+.btn:focus {
+  outline: 0;
+}
+.btn:disabled {
+  background-color: grey;
+  cursor: not-allowed;
+}
+.btn:disabled:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }/*# sourceMappingURL=main.css.map */
