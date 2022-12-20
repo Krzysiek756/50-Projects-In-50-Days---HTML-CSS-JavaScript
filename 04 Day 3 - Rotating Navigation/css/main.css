@@ -158,8 +158,31 @@ body {
   min-height: 100vh;
   padding: 50px;
 }
+.container__content {
+  max-width: 1000px;
+  margin: 60px auto;
+}
+.container__content h1 {
+  font-size: 30px;
+  font-weight: bold;
+}
+.container__content .italic {
+  margin-bottom: 20px;
+  font-style: italic;
+}
+.container__content p {
+  line-height: 1.5;
+  color: #333;
+  margin-bottom: 20px;
+}
+.container__content h3 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  font-weight: bold;
+}
 .container__content img {
   max-width: 100%;
+  margin-bottom: 20px;
 }
 .container__cirlce {
   position: fixed;
@@ -186,6 +209,7 @@ body {
   border: 0;
   font-size: 26px;
   color: white;
+  cursor: pointer;
 }
 .container .circle button:focus {
   outline: none;
@@ -201,7 +225,78 @@ body {
           transform-origin: top left;
 }
 
+.container.show-nav .circle {
+  -webkit-transform: rotate(-70deg);
+          transform: rotate(-70deg);
+}
+
+.container.show-nav + nav li {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+  -webkit-transition-delay: 0.3s;
+          transition-delay: 0.3s;
+}
+
 .show-nav {
   -webkit-transform: rotate(-20deg);
           transform: rotate(-20deg);
+}
+
+nav {
+  position: fixed;
+  bottom: 40px;
+  left: 0;
+  z-index: 100;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+nav ul {
+  list-style: none;
+  padding-left: 30px;
+}
+nav ul li {
+  text-transform: uppercase;
+  color: #fff;
+  margin: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 10px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transform: translateX(-100%);
+          transform: translateX(-100%);
+  -webkit-transition: -webkit-transform 0.4s ease-in;
+  transition: -webkit-transform 0.4s ease-in;
+  transition: transform 0.4s ease-in;
+  transition: transform 0.4s ease-in, -webkit-transform 0.4s ease-in;
+  cursor: pointer;
+}
+nav ul li + li {
+  margin-left: 15px;
+  -webkit-transform: translateX(-150%);
+          transform: translateX(-150%);
+}
+nav ul li + li + li {
+  margin-left: 30px;
+  -webkit-transform: translateX(-200%);
+          transform: translateX(-200%);
+}
+nav ul i {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 20px;
 }/*# sourceMappingURL=main.css.map */
