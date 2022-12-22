@@ -14,7 +14,56 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    overflow: hidden;
+    overflow-x: hidden;
 
+    background-color: #efedd6;
+
+}
+
+.content {
+    margin-top: 20px;
+
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    gap: 30px;
+
+
+
+
+    h1 {
+        font-size: 32px;
+        font-weight: bold;
+    }
+
+    .box {
+        background-color: steelblue;
+        padding: 60px 120px;
+        border-radius: 6px;
+
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+
+        color: white;
+
+        h2 {
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        transform: translateX(400%);
+        transition: transform 0.4s ease;
+
+
+        &:nth-last-of-type(even) {
+            transform: translateX(-400%);
+        }
+
+        &.show {
+            transform: translateX(0);
+            transition: transform 0.4s ease;
+        }
+    }
 }
