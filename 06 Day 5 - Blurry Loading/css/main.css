@@ -168,17 +168,11 @@ body {
   z-index: -1;
   -webkit-filter: blur(0px);
           filter: blur(0px);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
-.bg__text {
+
+.loading-text {
+  position: relative;
   font-size: 50px;
   color: white;
+  z-index: 22;
 }/*# sourceMappingURL=main.css.map */
