@@ -140,6 +140,7 @@ table {
 }
 
 body {
+  font-family: "Robot", sans-serif;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,4 +155,30 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 100vh;
+  overflow: hidden;
+}
+
+.bg {
+  background: url("../img/bg.jpg") no-repeat center center/cover;
+  position: absolute;
+  top: -30px;
+  left: -30px;
+  width: calc(100vw + 60px);
+  height: calc(100vh + 60px);
+  z-index: -1;
+  -webkit-filter: blur(0px);
+          filter: blur(0px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.bg__text {
+  font-size: 50px;
+  color: white;
 }/*# sourceMappingURL=main.css.map */
