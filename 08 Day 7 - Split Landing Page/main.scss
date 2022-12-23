@@ -8,14 +8,124 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
+$left-bg : rgba(87, 84, 236, 0.7);
+$right-bg : rgba(43, 43, 43, 0.8);
+$left-btn-hover: rgba(87, 84, 236, 1);
+$right-btn-hover: rgb(160, 24, 65);
+
+
 body {
     font-family: 'Robot', sans-serif;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    overflow-x: hidden;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
 
-    background-color: #efedd6;
+}
 
+.container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: #333;
+}
+
+
+.split {
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    overflow: hidden;
+
+    h1 {
+        font-size: 4rem;
+        color: white;
+        position: absolute;
+        left: 50%;
+        top: 20%;
+
+        transform: translateX(-50%);
+        white-space: no-wrap;
+    }
+
+
+    .btn {
+        position: absolute;
+        left: 50%;
+        top: 40%;
+        transform: translateX(-50%);
+
+        text-decoration: none;
+        color: white;
+        border: white solid .2rem;
+        font-size: 1rem;
+        width: 15rem;
+        padding: 1.5rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+}
+
+
+.left {
+    left: 0;
+    background: url('/img/pokedex.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $left-bg;
+    }
+
+
+    .btn {
+        transition: 0.3 ease-in-out;
+
+        &:hover {
+            background-color: $left-btn-hover;
+            border-color: $left-btn-hover;
+            transition: 0.3 ease-in-out;
+        }
+    }
+
+
+
+}
+
+.right {
+    right: 0;
+    background: url('/img/nintendo.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+
+
+    &::before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: $right-bg;
+    }
+
+
+    .btn {
+
+        transition: 0.3 ease-in-out;
+
+        &:hover {
+            background-color: $right-btn-hover;
+            border-color: $right-btn-hover;
+            transition: 0.3 ease-in-out;
+
+        }
+    }
 }

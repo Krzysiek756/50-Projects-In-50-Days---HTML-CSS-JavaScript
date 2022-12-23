@@ -141,70 +141,103 @@ table {
 
 body {
   font-family: "Robot", sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: #333;
+}
+
+.split {
+  position: absolute;
+  width: 50%;
+  height: 100%;
+  overflow: hidden;
+}
+.split h1 {
+  font-size: 4rem;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 20%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  white-space: no-wrap;
+}
+.split .btn {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  text-decoration: none;
+  color: white;
+  border: white solid 0.2rem;
+  font-size: 1rem;
+  width: 15rem;
+  padding: 1.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  overflow-x: hidden;
-  background-color: #efedd6;
 }
 
-.content {
-  margin-top: 20px;
-  width: 100vw;
-  height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  gap: 30px;
+.left {
+  left: 0;
+  background: url("/img/pokedex.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.content h1 {
-  font-size: 32px;
-  font-weight: bold;
+.left::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(87, 84, 236, 0.7);
 }
-.content .box {
-  background-color: steelblue;
-  padding: 60px 120px;
-  border-radius: 6px;
-  -webkit-box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-          box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
-  color: white;
-  -webkit-transform: translateX(400%);
-          transform: translateX(400%);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+.left .btn {
+  -webkit-transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
-.content .box h2 {
-  font-size: 24px;
-  font-weight: bold;
+.left .btn:hover {
+  background-color: rgb(87, 84, 236);
+  border-color: rgb(87, 84, 236);
+  -webkit-transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }
-.content .box:nth-last-of-type(even) {
-  -webkit-transform: translateX(-400%);
-          transform: translateX(-400%);
+
+.right {
+  right: 0;
+  background: url("/img/nintendo.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-.content .box.show {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
-  -webkit-transition: -webkit-transform 0.4s ease;
-  transition: -webkit-transform 0.4s ease;
-  transition: transform 0.4s ease;
-  transition: transform 0.4s ease, -webkit-transform 0.4s ease;
+.right::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(43, 43, 43, 0.8);
+}
+.right .btn {
+  -webkit-transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
+}
+.right .btn:hover {
+  background-color: rgb(160, 24, 65);
+  border-color: rgb(160, 24, 65);
+  -webkit-transition: 0.3 ease-in-out;
+  transition: 0.3 ease-in-out;
 }/*# sourceMappingURL=main.css.map */
