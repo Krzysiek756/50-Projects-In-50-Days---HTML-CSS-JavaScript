@@ -238,6 +238,39 @@ body {
 .right .btn:hover {
   background-color: rgb(160, 24, 65);
   border-color: rgb(160, 24, 65);
-  -webkit-transition: 0.3 ease-in-out;
-  transition: 0.3 ease-in-out;
+}
+
+.hover-left .left {
+  width: 75%;
+}
+
+.hover-left .right {
+  width: 25%;
+}
+
+.hover-right .right {
+  width: 75%;
+}
+
+.hover-right .left {
+  width: 25%;
+}
+
+.split.right,
+.split.left,
+.split.left::before,
+.split.right::before {
+  -webkit-transition: all 1000ms ease-in-out;
+  transition: all 1000ms ease-in-out;
+}
+
+@media (max-width: 800px) {
+  .split h1 {
+    font-size: 2rem;
+    top: 30%;
+  }
+  .split .btn {
+    padding: 1rem;
+    width: 10rem;
+  }
 }/*# sourceMappingURL=main.css.map */
