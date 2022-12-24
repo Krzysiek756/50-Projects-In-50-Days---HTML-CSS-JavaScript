@@ -1,0 +1,29 @@
+* {
+    box-sizing: border-box;
+}
+
+@import 'reset';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+
+$left-bg : rgba(87, 84, 236, 0.7);
+$right-bg : rgba(43, 43, 43, 0.8);
+$left-btn-hover: rgba(87, 84, 236, 1);
+$right-btn-hover: rgb(160, 24, 65);
+
+$hover-width: 75%;
+$other-width: 25%;
+
+$speed: 1000ms;
+
+
+body {
+    font-family: 'Robot', sans-serif;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+
+}
+
