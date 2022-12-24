@@ -1,26 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
   background-color: steelblue;
   color: #fff;
   font-family: "Muli", sans-serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   overflow: hidden;
   margin: 0;
@@ -54,8 +44,7 @@ body {
   outline: 0;
 }
 .container .btn:active {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
+  transform: scale(0.98);
 }
 .container .form-control {
   position: relative;
@@ -81,8 +70,7 @@ body {
 }
 .container .form-control input:focus + label span, .container .form-control input:valid + label span {
   color: lightblue;
-  -webkit-transform: translateY(-30px);
-          transform: translateY(-30px);
+  transform: translateY(-30px);
 }
 .container .form-control label {
   position: absolute;
@@ -95,6 +83,5 @@ body {
   display: inline-block;
   font-size: 18px;
   min-width: 5px;
-  -webkit-transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
-}/*# sourceMappingURL=main.css.map */
+}
