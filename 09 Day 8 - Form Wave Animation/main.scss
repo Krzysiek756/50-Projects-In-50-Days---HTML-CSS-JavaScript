@@ -109,10 +109,63 @@ input {
     font-size: 18px;
     color: white;
 
-    margin-bottom: 4px;
+
 
     &:focus,
     :valid {
         outline: 0;
+        color: lightblue;
+        border-bottom-color: lightblue;
+
+
+
+    }
+
+}
+
+label {
+    position: absolute;
+    top: 15px;
+    left: 0;
+
+    &:focus {
+        color: lightblue;
+    }
+
+}
+
+span {
+    display: inline-block;
+    font-size: 18px;
+    min-width: 5px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.form-control {
+
+    input:focus {
+
+
+        transform: translateY(-30px);
+
+    }
+
+    span {
+        &:valid {
+
+
+            transform: translateY(-30px);
+
+        }
     }
 }
