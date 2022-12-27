@@ -8,22 +8,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
-$left-bg : rgba(87, 84, 236, 0.7);
-$right-bg : rgba(43, 43, 43, 0.8);
-$left-btn-hover: rgba(87, 84, 236, 1);
-$right-btn-hover: rgb(160, 24, 65);
-
-$hover-width: 75%;
-$other-width: 25%;
-
-$speed: 1000ms;
-
-
 body {
     font-family: 'Robot', sans-serif;
     height: 100vh;
     overflow: hidden;
     margin: 0;
 
+    background-color: rgba(161, 100, 233);
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+
 }
 
+.btn {
+    border: 1px solid black;
+    padding: 10px 30px;
+    cursor: pointer;
+    color: white;
+    background-color: rebeccapurple;
+    border-radius: 5px;
+    text-transform: uppercase;
+
+
+}
+
+#buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
