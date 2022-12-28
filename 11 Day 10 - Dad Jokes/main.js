@@ -6,8 +6,8 @@ jokeBtn.addEventListener('click', generateJoke);
 
 generateJoke();
 
-
-function generateJoke() {
+//Asynchronic/Await 
+async function generateJoke() {
 
     const config = {
 
@@ -16,10 +16,27 @@ function generateJoke() {
         },
     }
 
-    fetch(APIURL, config)
-        .then(response => response.json())
-        .then((data) => {
 
-            jokeEl.innerHTML = data.joke;
-        })
+
+    const response = await fetch(APIURL, config);
+    const data = await response.json();
+    jokeEl.innerHTML = data.joke;
 }
+
+
+// function generateJoke() {
+
+//     const config = {
+
+//         headers: {
+//             'Accept': 'application/json'
+//         },
+//     }
+
+//     fetch(APIURL, config)
+//         .then(response => response.json())
+//         .then((data) => {
+
+//             jokeEl.innerHTML = data.joke;
+//         })
+// }
