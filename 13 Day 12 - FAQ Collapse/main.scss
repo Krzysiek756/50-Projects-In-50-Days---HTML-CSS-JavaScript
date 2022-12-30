@@ -14,12 +14,87 @@ body {
     overflow: hidden;
     margin: 0;
 
-    background-color: #e1e1e1;
+    background-color: #f0f0f0;
     display: flex;
-    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     text-align: center;
+    flex-direction: column;
+}
+
+h1 {
+    margin: 50px 0 30px;
+    font-size: 36px;
+}
+
+.faq__container {
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
 
 
+.faq {
+    background-color: transparent;
+    border: 1px solid #9FA4A8;
+    border-radius: 10px;
+    padding: 30px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    cursor: pointer;
+
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    &.active {
+        background-color: white;
+        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1), 0 3px 6px rgba(0, 0, 0, 0.1);
+
+        &__text {
+            display: flex;
+        }
+    }
+
+    button {
+        width: fit-content;
+        display: flex;
+    }
+
+    &__title {
+        margin-bottom: 10px;
+        font-weight: bold;
+    }
+
+    &__text {
+        display: none;
+    }
+}
+
+.faq.active::before,
+.faq.active::after {
+
+    font-family: "Font Awesome 5 Free";
+    content: "\f075";
+    color: #2ecc71;
+    font-size: 7rem;
+    position: absolute;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+    z-index: 0;
+
+}
+
+.faq.active::before {
+    color: #3498db;
+    top: -10px;
+    left: -30px;
+    transform: rotateY(180deg);
 }
