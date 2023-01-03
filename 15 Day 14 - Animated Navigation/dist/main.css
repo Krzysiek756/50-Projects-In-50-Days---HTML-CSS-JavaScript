@@ -172,6 +172,12 @@ body {
   opacity: 1;
   transform: rotateY(360deg);
 }
+.navigation.active .line1 {
+  transform: rotate(-765deg) translate(-5.5px);
+}
+.navigation.active .line2 {
+  transform: rotate(765deg) translate(-5.5px);
+}
 .navigation ul {
   display: flex;
   list-style-type: none;
@@ -190,4 +196,29 @@ body {
   color: black;
   text-decoration: none;
   margin: 0 10px;
+}
+.navigation .icon {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.navigation .icon:focus {
+  outline: 0;
+}
+.navigation .icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  transition: transform 0.6s linear;
+}
+.navigation .icon .line2 {
+  top: auto;
+  bottom: 10px;
 }

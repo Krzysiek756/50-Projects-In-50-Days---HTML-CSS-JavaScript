@@ -190,6 +190,14 @@ body {
   -webkit-transform: rotateY(360deg);
           transform: rotateY(360deg);
 }
+.navigation.active .line1 {
+  -webkit-transform: rotate(-765deg) translate(-5.5px);
+          transform: rotate(-765deg) translate(-5.5px);
+}
+.navigation.active .line2 {
+  -webkit-transform: rotate(765deg) translate(-5.5px);
+          transform: rotate(765deg) translate(-5.5px);
+}
 .navigation ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -215,4 +223,32 @@ body {
   color: black;
   text-decoration: none;
   margin: 0 10px;
+}
+.navigation .icon {
+  background-color: white;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+  position: relative;
+  height: 30px;
+  width: 30px;
+}
+.navigation .icon:focus {
+  outline: 0;
+}
+.navigation .icon .line {
+  background-color: #5290f9;
+  height: 2px;
+  width: 20px;
+  position: absolute;
+  top: 10px;
+  left: 5px;
+  -webkit-transition: -webkit-transform 0.6s linear;
+  transition: -webkit-transform 0.6s linear;
+  transition: transform 0.6s linear;
+  transition: transform 0.6s linear, -webkit-transform 0.6s linear;
+}
+.navigation .icon .line2 {
+  top: auto;
+  bottom: 10px;
 }/*# sourceMappingURL=main.css.map */
