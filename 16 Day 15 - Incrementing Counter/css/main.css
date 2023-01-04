@@ -143,7 +143,7 @@ body {
   font-family: "Robot", sans-serif;
   height: 100vh;
   margin: 0;
-  background-color: #eafbff;
+  background-color: #8e44ad;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -154,4 +154,33 @@ body {
       -ms-flex-pack: center;
           justify-content: center;
   text-align: center;
+  color: wheat;
+}
+
+.counter-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: column;
+      -ms-flex-pack: column;
+          justify-content: column;
+  margin: 30px 50px;
+  gap: 10px;
+}
+.counter-container .counter {
+  font-size: 60px;
+  margin-top: 10px;
+}
+
+@media (max-width: 580px) {
+  body {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }/*# sourceMappingURL=main.css.map */

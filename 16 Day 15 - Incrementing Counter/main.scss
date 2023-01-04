@@ -13,10 +13,34 @@ body {
     height: 100vh;
     margin: 0;
 
-    background-color: #eafbff;
+    background-color: #8e44ad;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: wheat;
 
+}
+
+
+
+.counter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: column;
+    margin: 30px 50px;
+    gap: 10px;
+
+    .counter {
+        font-size: 60px;
+        margin-top: 10px;
+
+    }
+}
+
+
+@media(max-width: 580px) {
+    body {
+        flex-direction: column;
+    }
 }
