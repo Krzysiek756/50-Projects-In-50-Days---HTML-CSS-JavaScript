@@ -6,14 +6,40 @@ const SEARCHAPI =
     "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
 
 
+const form = document.getElementById("form");
+const search = document.getElementById('search');
+
+
+
+// Get initial movies
+
+getMovies(APIURL);
+
+async function getMovies(url) {
+    const resp = await fetch(url)
+    const respData = await resp.json();
+
+    console.log(respData.results)
+
+}
 
 
 
 
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
 
+    const searchTerm = search.value;
 
+    if (searchTerm) {
+        getMovies(SEARCHAPI + searchTerm);
 
+        search.value = "";
 
+    } else {
+        getMovies(APIURL);
+    }
+});
 
 
 
