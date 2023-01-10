@@ -10,3 +10,199 @@ body {
     margin: 0;
 
 }
+
+
+.header {
+    background-color: #373b69;
+    display: flex;
+    justify-content: flex-end;
+    padding: 1rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+
+    a {
+        font-size: 28px;
+        color: white;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+}
+
+
+
+
+.search {
+    background-color: transparent;
+    border: 2px solid #22254b;
+    border-radius: 50px;
+    color: #fff;
+    font-family: inherit;
+    font-size: 1rem;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+}
+
+.search::placeholder {
+    color: #7378c5;
+}
+
+.search:focus {
+    background-color: #22254b;
+    outline: none;
+}
+
+#main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 30px;
+
+}
+
+.main {
+
+    &__resoults {
+        color: white;
+    }
+}
+
+.movie {
+    background-color: #373b69;
+    border-radius: 3px;
+    box-shadow: 0 4px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    position: relative;
+
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+.movie img {
+    width: 100%;
+}
+
+.movie-info {
+    color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    letter-spacing: 0.5px;
+
+}
+
+.movie-info h3 {
+    margin: 0;
+}
+
+.movie-info span {
+    background-color: #22254b;
+    border-radius: 3px;
+    font-weight: bold;
+    padding: 0.25rem 0.5rem;
+}
+
+.movie-info span.green {
+    color: rgb(39, 189, 39);
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: rgb(189, 42, 42);
+}
+
+.description {
+    background-color: #fff;
+    padding: 2rem;
+    position: absolute;
+    max-height: 100%;
+    overflow: auto;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    transform: translateY(101%);
+    transition: transform 0.3s ease-in;
+
+
+}
+
+.description {
+    margin-top: 0;
+}
+
+.movie:hover .description {
+    transform: translateY(0);
+}
+
+
+#tags {
+    margin: 20px 20px;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+
+
+
+    .tag {
+        color: white;
+        padding: 10px 20px;
+        background-color: #373b69;
+        border-radius: 50px;
+        cursor: pointer;
+        transition: 0.4s;
+
+
+    }
+
+    .highlight {
+        background-color: #6b6fa0;
+        transition: 0.4s;
+    }
+
+    // .clear-btn {
+    //     background-color: #29a55d;
+    //     text-transform: capitalize;
+    // }
+
+
+}
+
+
+.pagintaion {
+    display: flex;
+    margin: 10px 30px;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.page {
+    padding: 20px;
+    cursor: pointer;
+    color: white;
+}
+
+.page.disabled {
+    cursor: not-allowed;
+    color: grey;
+}
+
+.current {
+    padding: 10px 20px;
+    border-radius: 50%;
+    border: 5px solid orange;
+    font-size: 20px;
+    font-weight: 600;
+    width: fit-content;
+}

@@ -6,13 +6,28 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/main.css">
-    <title>Example17 Movie App</title>
+    <title>Film Api</title>
 
 </head>
 
 <body>
 
 
+    <header class="header">
+        <div class="header__logo"><a href="#" id="reload" onclick="window.location.reload(true)">Film Api</a></div>
+        <div class="header__search">
+            <form id="form">
+                <input type="text" id="search" placeholder="Search" class="search" />
+            </form>
+        </div>
+    </header>
+    <div id="tags"> </div>
+    <div id="main" class="main"></div>
+    <div class="pagintaion">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
 
 
 
