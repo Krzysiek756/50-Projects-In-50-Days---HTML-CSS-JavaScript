@@ -1,0 +1,27 @@
+* {
+    box-sizing: border-box;
+}
+
+@import 'reset';
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
+
+
+$border-color: #144fc6;
+$fill-color: #6ab3f8;
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+
+    background-color: #3494e4;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    margin-top: 40px;
+    gap: 20px;
+
+}
