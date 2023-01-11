@@ -10,24 +10,24 @@
 
 body {
     font-family: 'Montserrat', sans-serif;
-    margin: 0;
 
     display: flex;
     align-items: center;
     flex-direction: column;
     color: white;
-    height: 100vh;
+    background-position: center center;
+    background-size: cover;
 
 }
 
 .container {
-    background: url('/img/metro-1.jpg');
+
     height: 100vh;
-    width: 100%;
-    background-position: center center;
-    background-size: cover;
+    width: 100vw;
     transition: 0.4s;
 
+    background-position: center center;
+    background-size: cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -56,24 +56,50 @@ body {
 
 .slide {
 
-
     opacity: 0;
     height: 100vh;
     width: 100vw;
-    background: url('/img/metro-1.jpg');
-    background-position: center center;
-    background-size: cover;
     position: absolute;
     z-index: 1;
     top: -15vh;
     left: -15vw;
     transition: 0.4s ease;
-
+    background-position: center center;
+    background-size: cover;
 
     &.active {
         opacity: 1;
-
     }
+
+    // &:nth-child(1) {
+    //     background-image: url('/img/metro-1.jpg');
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
+
+    // &:nth-child(2) {
+    //     background: url('/img/metro-2.jpg');
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
+
+    // &:nth-child(3) {
+    //     background: url('/img/metro-3.jpg');
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
+
+    // &:nth-child(4) {
+    //     background: url('/img/metro-4.jpg');
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
+
+    // &:nth-child(5) {
+    //     background: url('/img/metro-5.jpg');
+    //     background-position: center center;
+    //     background-size: cover;
+    // }
 
 
 }
@@ -112,12 +138,12 @@ body {
         }
     }
 
-    .left-arrrow {
+    .left {
         left: calc(15vw - 75px);
 
     }
 
-    .right-arrrow {
+    .right {
         right: calc(15vw - 75px);
 
     }

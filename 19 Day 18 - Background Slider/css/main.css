@@ -141,7 +141,6 @@ table {
 
 body {
   font-family: "Montserrat", sans-serif;
-  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -153,17 +152,17 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
   color: white;
-  height: 100vh;
+  background-position: center center;
+  background-size: cover;
 }
 
 .container {
-  background: url("/img/metro-1.jpg");
   height: 100vh;
-  width: 100%;
-  background-position: center center;
-  background-size: cover;
+  width: 100vw;
   -webkit-transition: 0.4s;
   transition: 0.4s;
+  background-position: center center;
+  background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -198,15 +197,14 @@ body {
   opacity: 0;
   height: 100vh;
   width: 100vw;
-  background: url("/img/metro-1.jpg");
-  background-position: center center;
-  background-size: cover;
   position: absolute;
   z-index: 1;
   top: -15vh;
   left: -15vw;
   -webkit-transition: 0.4s ease;
   transition: 0.4s ease;
+  background-position: center center;
+  background-size: cover;
 }
 .slide.active {
   opacity: 1;
@@ -238,9 +236,9 @@ body {
   -webkit-transform: translateY(-50%) scale(0.98);
           transform: translateY(-50%) scale(0.98);
 }
-.btn .left-arrrow {
+.btn .left {
   left: calc(15vw - 75px);
 }
-.btn .right-arrrow {
+.btn .right {
   right: calc(15vw - 75px);
 }/*# sourceMappingURL=main.css.map */
