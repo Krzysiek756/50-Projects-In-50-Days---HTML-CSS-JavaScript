@@ -7,15 +7,87 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
 
+$primary-color: #000;
+$secondary-color: #fff;
+
+html {
+
+    .dark {
+        color: $secondary-color;
+        background-color: #000;
+    }
+
+    .white {
+        color: $primary-color;
+        background-color: $secondary-color;
+    }
+
+    transition: all 0.5s ease-in;
+}
+
 
 body {
     font-family: 'Montserrat', sans-serif;
-
+    height: 100vh;
     display: flex;
     align-items: center;
-    flex-direction: column;
-    color: white;
+    justify-content: center;
+    color: black;
     background-position: center center;
     background-size: cover;
 
+}
+
+.toggle {
+    cursor: pointer;
+    background-color: $primary-color;
+    color: $secondary-color;
+    border: 0;
+    border-radius: 4px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 100px;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.clock-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.clock {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    background-color: #f0f0f0;
+}
+
+.needle {
+    background-color: $primary-color;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 65px;
+    width: 3px;
+    transform-origin: bottom center;
+
+    &.hour {
+        transform: translate(-50%, -100%) rotate(0deg);
+    }
+
+    &.minute {
+        transform: translate(-50%, -100%) rotate(0deg);
+        height: 100px;
+    }
+
+    &.second {
+        transform: translate(-50%, -100%) rotate(0deg);
+        height: 100px;
+        background-color: #e74c3c;
+    }
 }
