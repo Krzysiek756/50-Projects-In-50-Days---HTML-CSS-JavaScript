@@ -143,12 +143,28 @@ html {
   -webkit-transition: all 0.5s ease-in;
   transition: all 0.5s ease-in;
 }
-html .dark {
+html.dark {
   color: #fff;
   background-color: #000;
 }
-html .white {
+html.dark .time {
+  color: #fff;
+}
+html.dark .circle {
+  background-color: #fff;
   color: #000;
+}
+html.dark .center-point::after {
+  background-color: #fff;
+}
+html.dark button {
+  background-color: #fff;
+  color: #000;
+}
+html.dark .hour {
+  background-color: #fff;
+}
+html.dark .minute {
   background-color: #fff;
 }
 
@@ -214,6 +230,8 @@ body {
   width: 3px;
   -webkit-transform-origin: bottom center;
           transform-origin: bottom center;
+  -webkit-transition: all 0.5s ease-in;
+  transition: all 0.5s ease-in;
 }
 .needle.hour {
   -webkit-transform: translate(-50%, -100%) rotate(0deg);

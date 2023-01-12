@@ -12,15 +12,41 @@ $secondary-color: #fff;
 
 html {
 
-    .dark {
+    &.dark {
         color: $secondary-color;
-        background-color: #000;
+        background-color: $primary-color;
+
+        .time {
+            color: $secondary-color;
+        }
+
+        .circle {
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+
+        .center-point::after {
+            background-color: $secondary-color;
+        }
+
+        button {
+            background-color: $secondary-color;
+            color: $primary-color;
+        }
+
+        .hour {
+            background-color: $secondary-color;
+        }
+
+        .minute {
+            background-color: $secondary-color;
+        }
+
+
+
     }
 
-    .white {
-        color: $primary-color;
-        background-color: $secondary-color;
-    }
+
 
     transition: all 0.5s ease-in;
 }
@@ -75,6 +101,7 @@ body {
     height: 65px;
     width: 3px;
     transform-origin: bottom center;
+    transition: all 0.5s ease-in;
 
     &.hour {
         transform: translate(-50%, -100%) rotate(0deg);
