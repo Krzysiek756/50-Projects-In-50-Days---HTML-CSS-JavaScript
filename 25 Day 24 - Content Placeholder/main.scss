@@ -2,7 +2,7 @@
     box-sizing: border-box;
 }
 
-@import 'reset';
+// @import 'reset';
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap');
@@ -24,10 +24,9 @@ body {
     overflow: hidden;
     width: 350px;
 
-    .card-header {
+    &-header {
 
-        height: 300px;
-        padding-bottom: 20px;
+        height: 250px;
 
         img {
             object-fit: cover;
@@ -36,8 +35,52 @@ body {
         }
     }
 
-    .card-content {
+    &-content {
         background-color: white;
+        padding: 30px;
+
+        display: flex;
+        flex-direction: column;
+        gap:20px;
+
+
+    }
+
+    &-title{
+        font-weight: bold;
+        font-size: 20px;
+        height: 20px;
+        margin: 0;
+    }
+
+    &-expert {
+        color: #777;
+        margin: 10px 0 20px;
+    }
+
+    .author {
+        display: flex;
+
+        &-info{
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                margin-left: 10px;
+                width: 100px;
+
+                small {
+                    color: #aaa;
+                    margin-top: 5px;
+                }
+        }
+
+    }
+
+    .profile-img {
+        border-radius: 50%;
+        overflow: hidden;
+        height: 40px;
+        width: 40px;
 
     }
 
