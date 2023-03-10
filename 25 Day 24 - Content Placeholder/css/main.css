@@ -140,7 +140,7 @@ table {
 }
 
 body {
-  background-color: white;
+  background-color: #ecf0f1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -152,4 +152,30 @@ body {
           justify-content: center;
   height: 100vh;
   overflow: hidden;
+  margin: 0;
+}
+
+.card {
+  -webkit-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  overflow: hidden;
+  width: 350px;
+}
+.card .card-header {
+  background-color: pink;
+  height: 300px;
+  padding-bottom: 20px;
+}
+.card .card-header img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+.card .card-content {
+  background-color: yellow;
+}
+.card img {
+  max-width: 100%;
 }/*# sourceMappingURL=main.css.map */
